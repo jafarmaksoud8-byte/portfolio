@@ -1,253 +1,271 @@
-/* --- الألوان والإعدادات العامة --- */
+/* ==========================================
+   GLOBAL STYLES & VARIABLES (Dark Theme)
+   ========================================== */
 :root {
-    --bg-main: #0B0F19;
-    --bg-secondary: #111827;
-    --card-bg: #151C2B;
-    --border-color: #1F2937;
-    --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
-    --accent-blue: #42A5F5;
-    --accent-hover: #64B5F6;
+    --bg-primary: #0b0f19;
+    --bg-card: #111827;
+    --border-color: #1f2937;
+    --border-hover: #3b82f6;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --accent-blue: #3b82f6;
+    --accent-blue-glow: rgba(59, 130, 246, 0.15);
 }
 
-html {
-    scroll-behavior: smooth;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
     color: var(--text-primary);
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* --- النافبار الثابت (Sticky Navbar) --- */
+/* ==========================================
+   NAVBAR
+   ========================================== */
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 50px;
-    background: rgba(11, 15, 25, 0.85);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
+    padding: 20px 5%;
     border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
 }
 
 nav .logo {
+    font-weight: 700;
     font-size: 20px;
-    font-weight: bold;
     color: var(--text-primary);
 }
 
 nav ul {
-    display: flex;
     list-style: none;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+    display: flex;
     align-items: center;
+    gap: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--text-secondary);
-    font-weight: 500;
     font-size: 14px;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--accent-blue);
 }
 
-.nav-btn {
-    background: transparent;
-    color: var(--accent-blue) !important;
+nav ul li a.nav-btn {
+    background-color: transparent;
     border: 1px solid var(--accent-blue);
     padding: 8px 16px;
     border-radius: 6px;
-    transition: all 0.3s ease !important;
+    color: var(--accent-blue);
+    transition: all 0.2s ease;
 }
 
-.nav-btn:hover {
-    background: rgba(66, 165, 245, 0.1);
+nav ul li a.nav-btn:hover {
+    background-color: var(--accent-blue);
+    color: #fff;
 }
 
-/* --- الهيكل العام للأقسام --- */
+/* ==========================================
+   SECTIONS GENERAL
+   ========================================== */
 .section {
-    padding: 100px 50px;
-    min-height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid rgba(31, 41, 55, 0.4);
+    padding: 100px 10% 60px 10%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .section-title {
     font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
     color: var(--text-primary);
+}
+
+/* ==========================================
+   TECHNICAL SKILLS SECTION (مطابق لطلبك حرفياً 3x2)
+   ========================================== */
+.skills-desc {
     text-align: center;
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 40px;
 }
 
-/* --- إعدادات الحركات الهادئة (بطيئة ومدروسة) --- */
-.anim-left,
-.anim-right,
-.anim-top,
-.anim-bottom {
-    opacity: 0;
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    /* 3 أعمدة بالضبط كما طلبت */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.anim-left {
-    transform: translateX(-60px);
+.skill-category-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    /* الـ padding كما طلبته تماماً */
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.anim-right {
-    transform: translateX(60px);
+/* Hover Animation: ارتفاع 4px فقط مع بوردر أزرق خفيف وبدون قفزات قوية */
+.skill-category-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 25px -5px var(--accent-blue-glow);
 }
 
-.anim-top {
-    transform: translateY(-50px);
+.skill-category-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    /* مسافة واضحة بين العنوان والـ Tags حتى لا تلتصق به */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.anim-bottom {
-    transform: translateY(50px);
+.skill-category-card h3 i {
+    color: var(--accent-blue);
+    font-size: 18px;
+    transition: transform 0.25s ease;
 }
 
-.anim-left.is-visible,
-.anim-right.is-visible,
-.anim-top.is-visible,
-.anim-bottom.is-visible {
-    opacity: 1;
-    transform: translate(0, 0);
+.skill-category-card:hover h3 i {
+    transform: scale(1.1);
 }
 
-/* --- 2. Hero Section --- */
-#home {
-    background: radial-gradient(circle at 70% 30%, rgba(66, 165, 245, 0.05) 0%, transparent 60%);
-    text-align: center;
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
+.skill-tag {
+    background-color: rgba(31, 41, 55, 0.7);
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-tag:hover {
+    color: var(--text-primary);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* ==========================================
+   OTHER SECTIONS (Hero, Projects, Experience, etc.)
+   ========================================== */
 .hero-content {
-    max-width: 800px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-content h1 {
     font-size: 48px;
-    margin: 0 0 10px 0;
-    font-weight: bold;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
 .hero-subtitle {
-    font-size: 22px;
+    font-size: 24px;
     color: var(--accent-blue);
-    margin-bottom: 20px;
     font-weight: 600;
-}
-
-.hero-desc {
-    color: var(--text-secondary);
-    font-size: 16px;
-    line-height: 1.6;
     margin-bottom: 15px;
 }
 
+.hero-desc {
+    max-width: 600px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
 .hero-tech {
-    color: var(--accent-blue);
+    color: var(--text-secondary);
     font-size: 14px;
     margin-bottom: 30px;
-    letter-spacing: 1px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
-    justify-content: center;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
 }
 
 .btn-primary {
-    background: var(--accent-blue);
+    background-color: var(--accent-blue);
     color: #fff;
     padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
 }
 
 .btn-primary:hover {
-    background: var(--accent-hover);
-    transform: translateY(-2px);
+    background-color: #2563eb;
 }
 
 .btn-outline {
-    background: transparent;
+    background-color: transparent;
     color: var(--text-primary);
     border: 1px solid var(--border-color);
     padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
 }
 
 .btn-outline:hover {
     border-color: var(--accent-blue);
-    color: var(--accent-blue);
-    transform: translateY(-2px);
 }
 
-.hero-socials {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    color: var(--text-secondary);
-    font-size: 14px;
-}
-
-.hero-socials a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.hero-socials a:hover {
-    color: var(--accent-blue);
-}
-
-/* --- 3. Quick Stats --- */
+/* Stats Container */
 .stats-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: -40px;
-    margin-bottom: 60px;
-    padding: 0 50px;
-    box-sizing: border-box;
+    max-width: 1200px;
+    margin: -40px auto 40px auto;
+    padding: 0 5%;
 }
 
 .stat-card {
-    background: var(--card-bg);
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 10px;
@@ -255,10 +273,9 @@ nav ul li a:hover {
 }
 
 .stat-number {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 700;
     color: var(--accent-blue);
-    margin-bottom: 5px;
 }
 
 .stat-label {
@@ -266,237 +283,17 @@ nav ul li a:hover {
     color: var(--text-secondary);
 }
 
-/* --- 4. About Me --- */
-.about-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    max-width: 1000px;
-    width: 100%;
-    align-items: center;
-}
-
-.about-text h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: var(--text-primary);
-}
-
-.about-text p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.about-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 12px;
-}
-
-.about-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.about-card li {
-    margin-bottom: 12px;
-    font-size: 14px;
-    color: var(--text-secondary);
-}
-
-.about-card li strong {
-    color: var(--text-primary);
-}
-
-/* --- 5. Technical Skills --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
-    width: 100%;
-}
-
-.skill-category-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.skill-category-card:hover {
-    border-color: var(--accent-blue);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(66, 165, 245, 0.05);
-}
-
-.skill-category-card h3 {
-    font-size: 16px;
-    color: var(--accent-blue);
-    margin-top: 0;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tag {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-    color: var(--text-secondary);
-}
-
-/* --- 6. Development Approach (How I Build) --- */
-.timeline {
-    max-width: 800px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.timeline-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 20px 25px;
-    border-radius: 10px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.timeline-num {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--accent-blue);
-}
-
-.timeline-content h3 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
-    color: var(--text-primary);
-}
-
-.timeline-content p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-}
-
-/* --- 7. Featured Projects --- */
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 1000px;
-    width: 100%;
-}
-
-.project-case-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 30px;
-    border-radius: 14px;
-    transition: all 0.3s ease;
-}
-
-.project-case-card:hover {
-    border-color: var(--accent-blue);
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(66, 165, 245, 0.08);
-}
-
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.project-header h3 {
-    margin: 0;
-    font-size: 20px;
-    color: var(--text-primary);
-}
-
-.project-tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 15px;
-}
-
-.project-tech-tags span {
-    font-size: 11px;
-    background: rgba(66, 165, 245, 0.1);
-    color: var(--accent-blue);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-.project-case-card p {
-    color: var(--text-secondary);
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.features-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 8px;
-    margin-bottom: 25px;
-    list-style: none;
-    padding: 0;
-}
-
-.features-list li {
-    font-size: 13px;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.features-list li i {
-    color: var(--accent-blue);
-    font-size: 10px;
-}
-
-.project-links {
-    display: flex;
-    gap: 12px;
-}
-
-/* --- 9 & 10. Experience & Education Timelines --- */
+/* Timelines (Experience, Education, Training) */
 .exp-timeline {
-    max-width: 800px;
-    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
     border-left: 2px solid var(--border-color);
     padding-left: 30px;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
 }
 
 .exp-item {
     position: relative;
+    margin-bottom: 40px;
 }
 
 .exp-item::before {
@@ -506,13 +303,13 @@ nav ul li a:hover {
     top: 5px;
     width: 12px;
     height: 12px;
-    background: var(--accent-blue);
     border-radius: 50%;
-    border: 3px solid var(--bg-main);
+    background-color: var(--accent-blue);
+    border: 2px solid var(--bg-primary);
 }
 
 .exp-date {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--accent-blue);
     font-weight: 600;
     margin-bottom: 5px;
@@ -520,9 +317,8 @@ nav ul li a:hover {
 
 .exp-title {
     font-size: 18px;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .exp-company {
@@ -532,194 +328,129 @@ nav ul li a:hover {
 }
 
 .exp-tasks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: disc;
+    padding-left: 18px;
+    color: var(--text-secondary);
+    font-size: 14px;
 }
 
 .exp-tasks li {
+    margin-bottom: 6px;
+}
+
+/* Projects Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.project-case-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-case-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-4px);
+}
+
+.project-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.project-tech-tags span {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.project-case-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.features-list li {
     font-size: 13px;
     color: var(--text-secondary);
     margin-bottom: 6px;
-    position: relative;
-    padding-right: 15px;
-}
-
-/* --- 11. GitHub Section --- */
-.github-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 35px;
-    border-radius: 14px;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-}
-
-.github-card p {
-    color: var(--text-secondary);
-    margin-bottom: 25px;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.repos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-    text-align: right;
-}
-
-.repo-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.repo-item h4 {
-    margin: 0 0 8px 0;
-    font-size: 14px;
-    color: var(--accent-blue);
-}
-
-.repo-item p {
-    font-size: 12px;
-    margin: 0 0 12px 0;
-    color: var(--text-secondary);
-}
-
-/* --- 12. Why Flutter? --- */
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    width: 100%;
-}
-
-.why-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.why-card i {
-    font-size: 28px;
-    color: var(--accent-blue);
-    margin-bottom: 15px;
-}
-
-.why-card h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-}
-
-.why-card p {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* --- 13. Resume CTA --- */
-.cta-section {
-    background: linear-gradient(180deg, var(--bg-main) 0%, var(--card-bg) 100%);
-    text-align: center;
-    padding: 80px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.cta-section h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: var(--text-primary);
-}
-
-.cta-section p {
-    color: var(--text-secondary);
-    font-size: 15px;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    line-height: 1.6;
-}
-
-/* --- 14. Contact Section --- */
-.contact-container {
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-}
-
-.contact-info-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.contact-btn {
-    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 14px;
-    background: var(--card-bg);
-    cursor: pointer;
-    transition: all 0.3s ease;
+    gap: 8px;
 }
 
-.contact-btn:hover {
-    border-color: var(--accent-blue);
+.features-list li i {
+    font-size: 6px;
     color: var(--accent-blue);
 }
 
-/* رسالة التنبيه المنبثقة للنسخ (Toast) */
+/* Footer & Contact */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 80px;
+}
+
 .toast-msg {
     visibility: hidden;
-    min-width: 160px;
-    background-color: var(--accent-blue);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
     position: fixed;
-    z-index: 2000;
-    left: 50%;
     bottom: 30px;
+    left: 50%;
     transform: translateX(-50%);
-    font-size: 13px;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
+    background-color: #10b981;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 2000;
+    transition: visibility 0.2s ease;
 }
 
 .toast-msg.show {
     visibility: visible;
-    opacity: 1;
 }
 
-/* --- 15. Footer --- */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: var(--bg-main);
-    color: var(--text-secondary);
-    font-size: 13px;
-    border-top: 1px solid var(--border-color);
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 }
 
-footer p {
-    margin: 5px 0;
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        display: none;
+    }
 }
