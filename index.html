@@ -5,132 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jafar Maksoud | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ربط ملف الـ CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- مكتبة أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">Jafar.M</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact" class="btn-contact">Contact</a>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Jafar Maksoud</span></h1>
-            <p>Software Developer & Engineer building clean, modern, and high-performance digital experiences.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="cv.pdf" target="_blank" class="btn-secondary"><i class="fas fa-file-pdf"></i> View CV</a>
-                <a href="cv.pdf" download="Jafar_Maksoud_CV.pdf" class="btn-secondary"><i class="fas fa-download"></i>
-                    Download CV</a>
-                <a href="#contact" class="btn-secondary">Let's Talk</a>
-            </div>
+    <!-- القائمة العلوية -->
+    <nav>
+        <div class="logo">Jafar.M</div>
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- قسم الرئيسية (Home) - حركة من الأعلى -->
+    <section id="home" class="section anim-top">
+        <h1>Hi, I'm Jafar Maksoud</h1>
+        <p>Software Developer & Engineer building clean, modern, and high-performance digital experiences.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#" class="btn-outline"><i class="fas fa-file-pdf"></i> View CV</a>
+            <a href="#" class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
+            <a href="#contact" class="btn-primary">Let's Talk</a>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <!-- قسم عني (About) - حركة من اليسار -->
+    <section id="about" class="section anim-left">
         <h2>About Me</h2>
-        <p class="about-text">
+        <p style="max-width: 650px; text-align: center; color: #ccc; line-height: 1.6;">
             Passionate software developer with a strong engineering background. Specialized in crafting robust web and
             mobile applications with clean architecture and exceptional user interfaces.
         </p>
     </section>
 
-    <section id="skills" class="section bg-light">
+    <!-- قسم المهارات (Skills) - حركة من اليمين -->
+    <section id="skills" class="section anim-right">
         <h2>Core Skills & Professional Roadmap</h2>
-        <div
-            style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; text-align: left;">
-
-            <!-- 1 -->
-            <div
-                style="background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-                <h3 style="color: #38bdf8; margin-bottom: 8px;"><i class="fas fa-mobile-alt"></i> 1. Core Framework &
-                    Language</h3>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Flutter Framework:</strong>
-                    Cross-platform application development foundation.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Dart Programming
-                        Language:</strong> The core language powering Flutter apps.</p>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3><i class="fas fa-mobile-alt"></i> 1. Core Framework & Language</h3>
+                <p><strong>Flutter Framework:</strong> Cross-platform application development foundation.<br>
+                    <strong>Dart Programming Language:</strong> The core language powering Flutter apps.
+                </p>
             </div>
-
-            <!-- 2 -->
-            <div
-                style="background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-                <h3 style="color: #38bdf8; margin-bottom: 8px;"><i class="fas fa-layer-group"></i> 2. Advanced State
-                    Management</h3>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">BLoC / Cubit:</strong> The
-                    robust and industry-standard pattern for scalable apps.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Provider / Riverpod /
-                        GetX:</strong> Effective tools for simple and fast state/routing handling.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Async Operations:</strong>
-                    Proficient handling of async/await, Futures, and Streams.</p>
+            <div class="skill-card">
+                <h3><i class="fas fa-layer-group"></i> 2. Advanced State Management</h3>
+                <p><strong>BLoC / Cubit:</strong> The robust and industry-standard pattern for scalable apps.<br>
+                    <strong>Provider / Riverpod / GetX:</strong> Effective tools for fast state/routing handling.
+                </p>
             </div>
-
-            <!-- 3 -->
-            <div
-                style="background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-                <h3 style="color: #38bdf8; margin-bottom: 8px;"><i class="fas fa-database"></i> 3. Networking & Local
-                    Databases</h3>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">RESTful APIs & Dio:</strong>
-                    Robust HTTP requests, error handling, and loading states.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">JSON Serialization:</strong>
-                    Converting server responses into reliable Dart models.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Local Storage:</strong> Fast
-                    NoSQL/SQL caching using Hive, Isar, Sqflite, and SharedPreferences.</p>
+            <div class="skill-card">
+                <h3><i class="fas fa-database"></i> 3. Networking & Local Databases</h3>
+                <p><strong>RESTful APIs & Dio:</strong> Robust HTTP requests, error handling, and loading states.<br>
+                    <strong>Local Storage:</strong> Fast caching using Hive, Isar, Sqflite, and SharedPreferences.
+                </p>
             </div>
-
-            <!-- 4 -->
-            <div
-                style="background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-                <h3 style="color: #38bdf8; margin-bottom: 8px;"><i class="fas fa-puzzle-piece"></i> 4. Device Features &
-                    Backend Services</h3>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Audioplayers / Just
-                        Audio:</strong> Media playback and custom audio controls.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Geolocator & Google
-                        Maps:</strong> Location-based services and GPS map integration.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Firebase Services:</strong>
-                    Authentication, Firestore, and Cloud Messaging (FCM).</p>
+            <div class="skill-card">
+                <h3><i class="fas fa-cogs"></i> 5. Architecture, UI & Custom Widgets</h3>
+                <p><strong>Clean Architecture / MVVM:</strong> Separating layers (Data, Domain, Presentation).<br>
+                    <strong>Custom Widgets & Responsive UI:</strong> Building modular, high-performance UI components.
+                </p>
             </div>
-
-            <!-- 5 -->
-            <div
-                style="background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-                <h3 style="color: #38bdf8; margin-bottom: 8px;"><i class="fas fa-code-branch"></i> 5. Architecture, UI &
-                    Custom Widgets</h3>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Clean Architecture /
-                        MVVM:</strong> Separating layers (Data, Domain, Presentation) for maintainability.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Custom Widgets & UI
-                        Design:</strong> Building modular, reusable, and high-performance UI components.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Responsive & Adaptive
-                        UI:</strong> Designing layouts that seamlessly adapt to mobile, tablet, and web screens.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">SOLID Principles &
-                        OOP:</strong> Writing clean, scalable, and object-oriented code.</p>
-            </div>
-
-            <!-- 6 -->
-            <div
-                style="background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-                <h3 style="color: #38bdf8; margin-bottom: 8px;"><i class="fas fa-tools"></i> 6. Performance, Testing &
-                    DevOps</h3>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Performance
-                        Optimization:</strong> Ensuring jank-free rendering and memory management.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Testing:</strong> Unit and
-                    Widget testing for robust applications.</p>
-                <p style="margin: 4px 0; color: #cbd5e1;"><strong style="color: #ffffff;">Git & GitHub:</strong> Version
-                    control, branching strategies, and CI/CD basics.</p>
-            </div>
-
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <!-- قسم المشاريع (Projects) - حركة من الأسفل -->
+    <section id="projects" class="section anim-bottom">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
@@ -140,38 +88,49 @@
                 <a href="https://github.com/jafarmaksoud8-byte/flutter-news-app" target="_blank"
                     class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
+
             <div class="project-card">
                 <h3>Mizan App</h3>
-                <p>A Flutter mobile application built with local data persistence and clean UI architecture.</p>
+                <p>A robust financial management mobile application built with local data persistence and clean UI
+                    architecture.</p>
                 <a href="https://github.com/jafarmaksoud8-byte/mizan_app" target="_blank" class="project-link">GitHub <i
                         class="fas fa-arrow-right"></i></a>
             </div>
+
             <div class="project-card">
                 <h3>Notes App</h3>
-                <p>A Flutter note-taking application featuring local database storage and smooth data management.</p>
+                <p>A note-taking application featuring local database storage and smooth data management.</p>
                 <a href="https://github.com/jafarmaksoud8-byte/notes_app" target="_blank" class="project-link">GitHub <i
                         class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
-    <section id="contact" class="section bg-light">
+
+    <!-- قسم التواصل (Contact) - حركة عامة (من الأعلى) -->
+    <section id="contact" class="section anim-top">
         <h2>Get In Touch</h2>
         <p>I'm open to freelance opportunities and software development roles.</p>
-        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
-            <button onclick="copyEmail()"
-                style="border: 2px solid #38bdf8; background: transparent; cursor: pointer; font-size: 1rem; padding: 12px 28px; border-radius: 6px; color: #38bdf8; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                <i class="fas fa-envelope"></i> <span id="email-text">Copy Email</span>
-            </button>
-            <a href="tel:+963985643418"
-                style="border: 2px solid #38bdf8; background: transparent; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; padding: 12px 28px; border-radius: 6px; color: #38bdf8; font-weight: 600;">
-                <i class="fas fa-phone"></i> +963 985 643 418
-            </a>
+
+        <div class="contact-buttons">
+            <div class="contact-btn">
+                <i class="fas fa-envelope"></i>
+                <span>jafarmaksoud8@gmail.com</span>
+                <i class="fas fa-copy copy-icon" title="Copy Icon"></i>
+            </div>
+
+            <div class="contact-btn">
+                <i class="fas fa-phone-alt"></i>
+                <span>+963 985 643 418</span>
+                <i class="fas fa-copy copy-icon" title="Copy Icon"></i>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Jafar Maksoud. All rights reserved.</p>
+        <p>© 2026 Jafar Maksoud. All rights reserved.</p>
     </footer>
+
+    <!-- ربط ملف الـ JavaScript المنفصل -->
     <script src="script.js"></script>
 </body>
 
