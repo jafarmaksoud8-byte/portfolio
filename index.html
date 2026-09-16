@@ -1,141 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jafar Maksoud | Portfolio</title>
-    <!-- ربط ملف الـ CSS -->
+    <title>Jafar Maksoud | Flutter Developer</title>
+    <!-- ملف الـ CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- مكتبة أيقونات FontAwesome -->
+    <!-- مكتبة الأيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- القائمة العلوية -->
+    <!-- 1. NAVBAR -->
     <nav>
-        <div class="logo">Jafar.M</div>
+        <div class="logo">Jafar Maksoud</div>
         <ul>
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#contact" class="nav-btn">View Resume</a></li>
         </ul>
     </nav>
 
-    <!-- 1. قسم الرئيسية (Home) -->
+    <!-- 2. HERO SECTION -->
     <section id="home" class="section">
-        <h1 class="anim-top">Hi, I'm Jafar Maksoud</h1>
-        <p class="anim-bottom">Software Developer & Engineer building clean, modern, and high-performance digital
-            experiences.</p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn-primary anim-left">View Projects</a>
-            <a href="#" class="btn-outline anim-top"><i class="fas fa-file-pdf"></i> View CV</a>
-            <a href="#" class="btn-outline anim-bottom"><i class="fas fa-download"></i> Download CV</a>
-            <a href="#contact" class="btn-primary anim-right">Let's Talk</a>
+        <div class="hero-content">
+            <h1 class="anim-top">Jafar Maksoud</h1>
+            <div class="hero-subtitle anim-bottom">Flutter Developer</div>
+            <p class="hero-desc anim-left">Building clean, responsive, and maintainable cross-platform mobile applications with Flutter & Dart.</p>
+            <div class="hero-tech anim-right">Flutter • Dart • Clean Architecture • BLoC • REST APIs</div>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary anim-left">View My Projects</a>
+                <a href="#contact" class="btn-outline anim-right">Download Resume</a>
+            </div>
+
+            <div class="hero-socials anim-bottom">
+                <a href="https://github.com/jafarmaksoud8-byte" target="_blank">GitHub</a> • 
+                <a href="#" target="_blank">LinkedIn</a> • 
+                <span class="copy-btn" data-copy="jafarmaksoud8@gmail.com" style="cursor:pointer;">Email</span>
+            </div>
         </div>
     </section>
 
-    <!-- 2. قسم عني (About) -->
+    <!-- 3. QUICK STATS -->
+    <div class="stats-container">
+        <div class="stat-card anim-top">
+            <div class="stat-number">Flutter</div>
+            <div class="stat-label">Development</div>
+        </div>
+        <div class="stat-card anim-top">
+            <div class="stat-number">Dart</div>
+            <div class="stat-label">Programming</div>
+        </div>
+        <div class="stat-card anim-bottom">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Featured Projects</div>
+        </div>
+        <div class="stat-card anim-bottom">
+            <div class="stat-number">2015</div>
+            <div class="stat-label">Engineering Graduate</div>
+        </div>
+    </div>
+
+    <!-- 4. ABOUT ME -->
     <section id="about" class="section">
-        <h2 class="anim-top">About Me</h2>
-        <p class="anim-left" style="max-width: 650px; text-align: center; color: #ccc; line-height: 1.6;">
-            Passionate software developer with a strong engineering background. Specialized in crafting robust web and
-            mobile applications with clean architecture and exceptional user interfaces.
-        </p>
+        <h2 class="section-title anim-top">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text anim-left">
+                <h3>Turning engineering knowledge into mobile applications.</h3>
+                <p>Equipped with a solid Computer Engineering background from Tishreen University, I specialize in developing high-performance mobile software using Flutter and Dart.</p>
+                <p>My focus centers on structured scalability, implementing Clean Architecture layers, managing application states cleanly with BLoC/Cubit, integrating RESTful APIs efficiently, and prioritizing robust problem-solving over quick fixes.</p>
+            </div>
+            <div class="about-card anim-right">
+                <ul>
+                    <li><strong>Based in:</strong> Latakia, Syria</li>
+                    <li><strong>Open to:</strong> Relocation & Remote Work</li>
+                    <li><strong>Role:</strong> Flutter Developer</li>
+                    <li><strong>Focus:</strong> Mobile Development</li>
+                    <li><strong>Currently:</strong> Flutter Development Diploma — In Progress</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- 3. قسم المهارات (Skills) -->
+    <!-- 5. TECHNICAL SKILLS -->
     <section id="skills" class="section">
-        <h2 class="anim-top">Core Skills & Professional Roadmap</h2>
-        <div class="skills-container">
-            <div class="skill-card anim-left">
-                <h3><i class="fas fa-mobile-alt"></i> 1. Core Framework & Language</h3>
-                <p><strong>Flutter Framework:</strong> Cross-platform application development foundation.<br>
-                    <strong>Dart Programming Language:</strong> The core language powering Flutter apps.
-                </p>
+        <h2 class="section-title anim-top">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category-card anim-left">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">Responsive UI</span>
+                    <span class="skill-tag">Flutter Widgets</span>
+                </div>
             </div>
-            <div class="skill-card anim-right">
-                <h3><i class="fas fa-layer-group"></i> 2. Advanced State Management</h3>
-                <p><strong>BLoC / Cubit:</strong> The robust and industry-standard pattern for scalable apps.<br>
-                    <strong>Provider / Riverpod / GetX:</strong> Effective tools for fast state/routing handling.
-                </p>
+            <div class="skill-category-card anim-right">
+                <h3><i class="fas fa-layer-group"></i> Architecture</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">BLoC</span>
+                    <span class="skill-tag">Cubit</span>
+                    <span class="skill-tag">Reusable Components</span>
+                </div>
             </div>
-            <div class="skill-card anim-left">
-                <h3><i class="fas fa-database"></i> 3. Networking & Local Databases</h3>
-                <p><strong>RESTful APIs & Dio:</strong> Robust HTTP requests, error handling, and loading states.<br>
-                    <strong>Local Storage:</strong> Fast caching using Hive, Isar, Sqflite, and SharedPreferences.
-                </p>
+            <div class="skill-category-card anim-left">
+                <h3><i class="fas fa-network-wired"></i> Backend / Networking</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Dio</span>
+                    <span class="skill-tag">JSON</span>
+                    <span class="skill-tag">Error Handling</span>
+                    <span class="skill-tag">PrettyDioLogger</span>
+                </div>
             </div>
-            <div class="skill-card anim-right">
-                <h3><i class="fas fa-cogs"></i> 5. Architecture, UI & Custom Widgets</h3>
-                <p><strong>Clean Architecture / MVVM:</strong> Separating layers (Data, Domain, Presentation).<br>
-                    <strong>Custom Widgets & Responsive UI:</strong> Building modular, high-performance UI components.
-                </p>
+            <div class="skill-category-card anim-right">
+                <h3><i class="fas fa-database"></i> Data & Storage</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Local Storage</span>
+                    <span class="skill-tag">JSON Parsing</span>
+                    <span class="skill-tag">Env Variables</span>
+                </div>
+            </div>
+            <div class="skill-category-card anim-left">
+                <h3><i class="fas fa-paint-brush"></i> UI/UX & Design</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Form Validation</span>
+                    <span class="skill-tag">Localization (RTL)</span>
+                </div>
+            </div>
+            <div class="skill-category-card anim-right">
+                <h3><i class="fas fa-tools"></i> Tools & Version Control</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">Flutter SDK</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. قسم المشاريع (Projects) -->
+    <!-- 6. DEVELOPMENT APPROACH (HOW I BUILD) -->
+    <section id="approach" class="section">
+        <h2 class="section-title anim-top">How I Build</h2>
+        <div class="timeline">
+            <div class="timeline-item anim-left">
+                <div class="timeline-num">01</div>
+                <div class="timeline-content">
+                    <h3>Understand</h3>
+                    <p>Analyze functional requirements, clarify core objectives, and map out smooth user flows.</p>
+                </div>
+            </div>
+            <div class="timeline-item anim-right">
+                <div class="timeline-num">02</div>
+                <div class="timeline-content">
+                    <h3>Design</h3>
+                    <p>Translate Figma layouts into precise, pixel-perfect, and responsive Flutter widget trees.</p>
+                </div>
+            </div>
+            <div class="timeline-item anim-left">
+                <div class="timeline-num">03</div>
+                <div class="timeline-content">
+                    <h3>Build</h3>
+                    <p>Implement structured Clean Architecture, predictable state management, and reliable API layers.</p>
+                </div>
+            </div>
+            <div class="timeline-item anim-right">
+                <div class="timeline-num">04</div>
+                <div class="timeline-content">
+                    <h3>Test & Improve</h3>
+                    <p>Debug edge cases, test network states, optimize performance, and refine code cleanliness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FEATURED PROJECTS -->
     <section id="projects" class="section">
-        <h2 class="anim-top">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card anim-left">
-                <h3>Flutter News App</h3>
-                <p>A professional Flutter news application featuring Clean Architecture, Dio networking, and secure
-                    environment variable management.</p>
-                <a href="https://github.com/jafarmaksoud8-byte/flutter-news-app" target="_blank"
-                    class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
+        <h2 class="section-title anim-top">Featured Projects</h2>
+        <div class="projects-container">
+            
+            <div class="project-case-card anim-left">
+                <div class="project-header">
+                    <h3>Flutter News App</h3>
+                </div>
+                <div class="project-tech-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Clean Architecture</span>
+                    <span>BLoC/Cubit</span>
+                    <span>Dio</span>
+                    <span>REST API</span>
+                </div>
+                <p>A cross-platform news application focused on structured architecture, asynchronous data handling, pagination, and responsive user interfaces.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-circle"></i> Clean Architecture layers</li>
+                    <li><i class="fas fa-circle"></i> REST API Integration via Dio</li>
+                    <li><i class="fas fa-circle"></i> Pagination & Asynchronous Data</li>
+                    <li><i class="fas fa-circle"></i> API Error Handling & Logger</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/jafarmaksoud8-byte/flutter-news-app" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
+                </div>
             </div>
 
-            <div class="project-card anim-bottom">
-                <h3>Mizan App</h3>
-                <p>A robust financial management mobile application built with local data persistence and clean UI
-                    architecture.</p>
-                <a href="https://github.com/jafarmaksoud8-byte/mizan_app" target="_blank" class="project-link">GitHub <i
-                        class="fas fa-arrow-right"></i></a>
+            <div class="project-case-card anim-right">
+                <div class="project-header">
+                    <h3>Mizan App</h3>
+                </div>
+                <div class="project-tech-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Local Storage</span>
+                    <span>Localization</span>
+                    <span>RTL Support</span>
+                </div>
+                <p>A robust financial management mobile application built with local data persistence, comprehensive form controls, and structured service layers.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-circle"></i> Profile Management & Forms</li>
+                    <li><i class="fas fa-circle"></i> Advanced Form Validation</li>
+                    <li><i class="fas fa-circle"></i> Local Database Persistence</li>
+                    <li><i class="fas fa-circle"></i> Arabic / English RTL Support</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/jafarmaksoud8-byte/mizan_app" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
+                </div>
             </div>
 
-            <div class="project-card anim-right">
-                <h3>Notes App</h3>
-                <p>A note-taking application featuring local database storage and smooth data management.</p>
-                <a href="https://github.com/jafarmaksoud8-byte/notes_app" target="_blank" class="project-link">GitHub <i
-                        class="fas fa-arrow-right"></i></a>
+            <div class="project-case-card anim-left">
+                <div class="project-header">
+                    <h3>Notes Application</h3>
+                </div>
+                <div class="project-tech-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Local Storage</span>
+                    <span>State Management</span>
+                </div>
+                <p>A clean note-taking application designed for seamless daily usage, featuring smooth CRUD operations and persistent local storage.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-circle"></i> Create, Edit & Delete Notes</li>
+                    <li><i class="fas fa-circle"></i> Fast Local Storage Management</li>
+                    <li><i class="fas fa-circle"></i> Reusable UI Widget Structure</li>
+                    <li><i class="fas fa-circle"></i> Smooth Navigation Flow</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/jafarmaksoud8-byte/notes_app" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 9. EXPERIENCE -->
+    <section id="experience" class="section">
+        <h2 class="section-title anim-top">Professional Experience</h2>
+        <div class="exp-timeline">
+            <div class="exp-item anim-left">
+                <div class="exp-date">2025 — Present</div>
+                <h3 class="exp-title">Flutter Developer — Freelance</h3>
+                <div class="exp-company">Remote / Syria</div>
+                <ul class="exp-tasks">
+                    <li>Architecting custom cross-platform mobile solutions using Flutter and Dart.</li>
+                    <li>Integrating secure RESTful backends and handling state management via BLoC/Cubit.</li>
+                    <li>Translating complex UI specifications into responsive user interfaces.</li>
+                </ul>
+            </div>
+            <div class="exp-item anim-right">
+                <div class="exp-date">Sep 2021 — Dec 2024</div>
+                <h3 class="exp-title">Flutter Developer & Instructor</h3>
+                <div class="exp-company">Al-Taj Center for Information Solutions • Latakia, Syria</div>
+                <ul class="exp-tasks">
+                    <li>Developed and maintained client software applications and databases.</li>
+                    <li>Taught programming and computational logic fundamentals to students.</li>
+                    <li>Collaborated on structured datasets and technical problem-solving tasks.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- 5. قسم التواصل (Contact) -->
+    <!-- 10. EDUCATION & TRAINING -->
+    <section id="education" class="section">
+        <h2 class="section-title anim-top">Education & Training</h2>
+        <div class="exp-timeline">
+            <div class="exp-item anim-left">
+                <div class="exp-date">2026 — Present</div>
+                <h3 class="exp-title">Flutter Development Diploma</h3>
+                <div class="exp-company">Easy Learn Academy</div>
+                <ul class="exp-tasks">
+                    <li>Advanced mobile architecture, BLoC pattern, and real-world API integration.</li>
+                </ul>
+            </div>
+            <div class="exp-item anim-right">
+                <div class="exp-date">2015</div>
+                <h3 class="exp-title">B.Sc. in Electronics Engineering</h3>
+                <div class="exp-company">Specialization in Computer Engineering & Automatic Control • Tishreen University, Latakia</div>
+                <ul class="exp-tasks">
+                    <li>Solid foundational training in core computing, systems logic, and engineering principles.</li>
+                </ul>
+            </div>
+            <div class="exp-item anim-left">
+                <div class="exp-date">2020</div>
+                <h3 class="exp-title">Technical Training Certifications</h3>
+                <div class="exp-company">Ecard Academy</div>
+                <ul class="exp-tasks">
+                    <li>Computer Systems & Mobile Device Maintenance.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. GITHUB / CODE SECTION -->
+    <section id="code" class="section">
+        <h2 class="section-title anim-top">Code & Open Source</h2>
+        <div class="github-card anim-bottom">
+            <p>I use Git and GitHub to manage projects, track development progress, branch features, and maintain clean source code.</p>
+            <a href="https://github.com/jafarmaksoud8-byte" target="_blank" class="btn-primary"><i class="fab fa-github"></i> Explore GitHub Profile</a>
+            
+            <div class="repos-grid">
+                <div class="repo-item">
+                    <h4>mizan_app</h4>
+                    <p>Financial management app with local data and forms.</p>
+                </div>
+                <div class="repo-item">
+                    <h4>flutter-news-app</h4>
+                    <p>Clean architecture news app with Dio and BLoC.</p>
+                </div>
+                <div class="repo-item">
+                    <h4>notes_app</h4>
+                    <p>Local data storage notes app with clean UI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. WHY FLUTTER? -->
+    <section id="why" class="section">
+        <h2 class="section-title anim-top">Why Flutter?</h2>
+        <div class="why-grid">
+            <div class="why-card anim-left">
+                <i class="fas fa-layer-group"></i>
+                <h3>Cross-Platform</h3>
+                <p>Build native-compiled applications for multiple platforms from a single unified codebase.</p>
+            </div>
+            <div class="why-card anim-top">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive UI</h3>
+                <p>Create consistent, fluid, and adaptable user interfaces across diverse screen sizes.</p>
+            </div>
+            <div class="why-card anim-right">
+                <i class="fas fa-code"></i>
+                <h3>Maintainable Code</h3>
+                <p>Leverage modular widget composition and structured architecture for long-term scalability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. RESUME CTA -->
+    <div class="cta-section">
+        <h2 class="anim-top">Let's Build Something Together</h2>
+        <p class="anim-bottom">I'm open to Flutter development opportunities, freelance projects, and relocation opportunities.</p>
+        <div class="hero-buttons" style="margin-top: 20px;">
+            <a href="#contact" class="btn-primary anim-left">Get in Touch</a>
+        </div>
+    </div>
+
+    <!-- 14. CONTACT -->
     <section id="contact" class="section">
-        <h2 class="anim-top">Get In Touch</h2>
-        <p class="anim-bottom">I'm open to freelance opportunities and software development roles.</p>
-
-        <div class="contact-buttons">
-            <div class="contact-btn copy-btn anim-left" data-copy="jafarmaksoud8@gmail.com">
-                <i class="fas fa-envelope"></i>
-                <span class="copy-text">jafarmaksoud8@gmail.com</span>
-                <i class="fas fa-copy copy-icon"></i>
-            </div>
-
-            <div class="contact-btn copy-btn anim-right" data-copy="+963 985 643 418">
-                <i class="fas fa-phone-alt"></i>
-                <span class="copy-text">+963 985 643 418</span>
-                <i class="fas fa-copy copy-icon"></i>
+        <h2 class="section-title anim-top">Get In Touch</h2>
+        <div class="contact-container anim-bottom">
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">Have a project or opportunity in mind? Feel free to reach out directly.</p>
+            
+            <div class="contact-info-box">
+                <div class="contact-btn copy-btn" data-copy="jafarmaksoud8@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>jafarmaksoud8@gmail.com</span>
+                    <i class="fas fa-copy" style="opacity: 0.6; margin-right: 5px;"></i>
+                </div>
+                <a href="https://github.com/jafarmaksoud8-byte" target="_blank" class="contact-btn">
+                    <i class="fab fa-github"></i>
+                    <span>jafarmaksoud8-byte</span>
+                </a>
+                <a href="#" target="_blank" class="contact-btn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- تنبيه منبثق للنسخ -->
+    <!-- تنبيه النسخ المنبثق -->
     <div id="toast" class="toast-msg">تم النسخ بنجاح!</div>
 
+    <!-- 15. FOOTER -->
     <footer>
+        <p><strong>Jafar Maksoud</strong> — Flutter Developer</p>
         <p>© 2026 Jafar Maksoud. All rights reserved.</p>
     </footer>
 
     <!-- ربط ملف الـ JavaScript -->
     <script src="script.js"></script>
 </body>
-
 </html>

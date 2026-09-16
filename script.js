@@ -1,24 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    // 1. تفعيل الحركات بحيث تتكرر في كل مرة يتم فيها الدخول والخروج من القسم
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. مراقبة الحركات وإعادتها في كل مرة يتم فيها التمرير فوق العناصر
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // عندما يصبح العنصر داخل الشاشة، نفّذ الحركة
                 entry.target.classList.add('is-visible');
             } else {
-                // عندما يخرج العنصر خارج الشاشة، احذف الكلاس لتعيد الحركة نفسها عند العودة إليه
                 entry.target.classList.remove('is-visible');
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
 
-    // مراقبة كل عنصر داخلي يحمل كلاس الحركة
     document.querySelectorAll('.anim-top, .anim-left, .anim-right, .anim-bottom').forEach((element) => {
         observer.observe(element);
     });
 
-    // 2. تلوين القائمة العلوية تلقائياً حسب القسم النشط
+    // 2. تحديث رابط القائمة النشط (Active Navbar Link) أثناء التمرير
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
 
@@ -26,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 200)) {
+            if (pageYOffset >= (sectionTop - 250)) {
                 current = section.getAttribute('id');
             }
         });
@@ -39,17 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 3. تفعيل زر النسخ مع رسالة التنبيه (Toast)
+    // 3. تفعيل زر النسخ الفوري (Copy to Clipboard) مع رسالة Toast
     const copyButtons = document.querySelectorAll('.copy-btn');
     const toast = document.getElementById('toast');
 
     copyButtons.forEach(button => {
         button.addEventListener('click', () => {
             const textToCopy = button.getAttribute('data-copy');
-
+            
             navigator.clipboard.writeText(textToCopy).then(() => {
                 toast.classList.add('show');
-
+                
                 setTimeout(() => {
                     toast.classList.remove('show');
                 }, 2000);
