@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // 1. تفعيل ظهور العناصر بالحركات عند التمرير
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. تفعيل ظهور العناصر الفردية بالحركات عند التمرير
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -8,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.anim-top, .anim-left, .anim-right, .anim-bottom').forEach((section) => {
-        observer.observe(section);
+    // مراقبة كل عنصر داخلي يحمل كلاس الحركة
+    document.querySelectorAll('.anim-top, .anim-left, .anim-right, .anim-bottom').forEach((element) => {
+        observer.observe(element);
     });
 
-    // 2. تلوين القسم النشط بالأزرق والباقي بالأبيض في القائمة العلوية
+    // 2. تلوين القائمة العلوية تلقائياً حسب القسم النشط
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
 
@@ -32,4 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // 3. تفعيل زر النسخ مع رسالة التنبيه (Toast)
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    const toast = document.getElementById('toast');
+
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const textToCopy = button.getAttribute('data-copy');
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    });
+
 });

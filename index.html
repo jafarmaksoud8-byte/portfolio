@@ -25,50 +25,51 @@
         </ul>
     </nav>
 
-    <!-- قسم الرئيسية (Home) - حركة من الأعلى -->
-    <section id="home" class="section anim-top">
-        <h1>Hi, I'm Jafar Maksoud</h1>
-        <p>Software Developer & Engineer building clean, modern, and high-performance digital experiences.</p>
+    <!-- 1. قسم الرئيسية (Home) -->
+    <section id="home" class="section">
+        <h1 class="anim-top">Hi, I'm Jafar Maksoud</h1>
+        <p class="anim-bottom">Software Developer & Engineer building clean, modern, and high-performance digital
+            experiences.</p>
         <div class="hero-buttons">
-            <a href="#projects" class="btn-primary">View Projects</a>
-            <a href="#" class="btn-outline"><i class="fas fa-file-pdf"></i> View CV</a>
-            <a href="#" class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
-            <a href="#contact" class="btn-primary">Let's Talk</a>
+            <a href="#projects" class="btn-primary anim-left">View Projects</a>
+            <a href="#" class="btn-outline anim-top"><i class="fas fa-file-pdf"></i> View CV</a>
+            <a href="#" class="btn-outline anim-bottom"><i class="fas fa-download"></i> Download CV</a>
+            <a href="#contact" class="btn-primary anim-right">Let's Talk</a>
         </div>
     </section>
 
-    <!-- قسم عني (About) - حركة من اليسار -->
-    <section id="about" class="section anim-left">
-        <h2>About Me</h2>
-        <p style="max-width: 650px; text-align: center; color: #ccc; line-height: 1.6;">
+    <!-- 2. قسم عني (About) -->
+    <section id="about" class="section">
+        <h2 class="anim-top">About Me</h2>
+        <p class="anim-left" style="max-width: 650px; text-align: center; color: #ccc; line-height: 1.6;">
             Passionate software developer with a strong engineering background. Specialized in crafting robust web and
             mobile applications with clean architecture and exceptional user interfaces.
         </p>
     </section>
 
-    <!-- قسم المهارات (Skills) - حركة من اليمين -->
-    <section id="skills" class="section anim-right">
-        <h2>Core Skills & Professional Roadmap</h2>
+    <!-- 3. قسم المهارات (Skills) -->
+    <section id="skills" class="section">
+        <h2 class="anim-top">Core Skills & Professional Roadmap</h2>
         <div class="skills-container">
-            <div class="skill-card">
+            <div class="skill-card anim-left">
                 <h3><i class="fas fa-mobile-alt"></i> 1. Core Framework & Language</h3>
                 <p><strong>Flutter Framework:</strong> Cross-platform application development foundation.<br>
                     <strong>Dart Programming Language:</strong> The core language powering Flutter apps.
                 </p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card anim-right">
                 <h3><i class="fas fa-layer-group"></i> 2. Advanced State Management</h3>
                 <p><strong>BLoC / Cubit:</strong> The robust and industry-standard pattern for scalable apps.<br>
                     <strong>Provider / Riverpod / GetX:</strong> Effective tools for fast state/routing handling.
                 </p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card anim-left">
                 <h3><i class="fas fa-database"></i> 3. Networking & Local Databases</h3>
                 <p><strong>RESTful APIs & Dio:</strong> Robust HTTP requests, error handling, and loading states.<br>
                     <strong>Local Storage:</strong> Fast caching using Hive, Isar, Sqflite, and SharedPreferences.
                 </p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card anim-right">
                 <h3><i class="fas fa-cogs"></i> 5. Architecture, UI & Custom Widgets</h3>
                 <p><strong>Clean Architecture / MVVM:</strong> Separating layers (Data, Domain, Presentation).<br>
                     <strong>Custom Widgets & Responsive UI:</strong> Building modular, high-performance UI components.
@@ -77,11 +78,11 @@
         </div>
     </section>
 
-    <!-- قسم المشاريع (Projects) - حركة من الأسفل -->
-    <section id="projects" class="section anim-bottom">
-        <h2>Featured Projects</h2>
+    <!-- 4. قسم المشاريع (Projects) -->
+    <section id="projects" class="section">
+        <h2 class="anim-top">Featured Projects</h2>
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card anim-left">
                 <h3>Flutter News App</h3>
                 <p>A professional Flutter news application featuring Clean Architecture, Dio networking, and secure
                     environment variable management.</p>
@@ -89,7 +90,7 @@
                     class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
 
-            <div class="project-card">
+            <div class="project-card anim-bottom">
                 <h3>Mizan App</h3>
                 <p>A robust financial management mobile application built with local data persistence and clean UI
                     architecture.</p>
@@ -97,7 +98,7 @@
                         class="fas fa-arrow-right"></i></a>
             </div>
 
-            <div class="project-card">
+            <div class="project-card anim-right">
                 <h3>Notes App</h3>
                 <p>A note-taking application featuring local database storage and smooth data management.</p>
                 <a href="https://github.com/jafarmaksoud8-byte/notes_app" target="_blank" class="project-link">GitHub <i
@@ -106,31 +107,34 @@
         </div>
     </section>
 
-    <!-- قسم التواصل (Contact) - حركة عامة (من الأعلى) -->
-    <section id="contact" class="section anim-top">
-        <h2>Get In Touch</h2>
-        <p>I'm open to freelance opportunities and software development roles.</p>
+    <!-- 5. قسم التواصل (Contact) -->
+    <section id="contact" class="section">
+        <h2 class="anim-top">Get In Touch</h2>
+        <p class="anim-bottom">I'm open to freelance opportunities and software development roles.</p>
 
         <div class="contact-buttons">
-            <div class="contact-btn">
+            <div class="contact-btn copy-btn anim-left" data-copy="jafarmaksoud8@gmail.com">
                 <i class="fas fa-envelope"></i>
-                <span>jafarmaksoud8@gmail.com</span>
-                <i class="fas fa-copy copy-icon" title="Copy Icon"></i>
+                <span class="copy-text">jafarmaksoud8@gmail.com</span>
+                <i class="fas fa-copy copy-icon"></i>
             </div>
 
-            <div class="contact-btn">
+            <div class="contact-btn copy-btn anim-right" data-copy="+963 985 643 418">
                 <i class="fas fa-phone-alt"></i>
-                <span>+963 985 643 418</span>
-                <i class="fas fa-copy copy-icon" title="Copy Icon"></i>
+                <span class="copy-text">+963 985 643 418</span>
+                <i class="fas fa-copy copy-icon"></i>
             </div>
         </div>
     </section>
+
+    <!-- تنبيه منبثق للنسخ -->
+    <div id="toast" class="toast-msg">تم النسخ بنجاح!</div>
 
     <footer>
         <p>© 2026 Jafar Maksoud. All rights reserved.</p>
     </footer>
 
-    <!-- ربط ملف الـ JavaScript المنفصل -->
+    <!-- ربط ملف الـ JavaScript -->
     <script src="script.js"></script>
 </body>
 
