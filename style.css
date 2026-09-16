@@ -59,32 +59,32 @@ nav ul li a:hover {
     align-items: center;
 }
 
-/* --- إعدادات الحركات التفصيلية للعناصر --- */
+/* --- إعدادات الحركات (تم جعلها أبطأ وأنعم بمدة 1.2 ثانية) --- */
 .anim-left,
 .anim-right,
 .anim-top,
 .anim-bottom {
     opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .anim-left {
-    transform: translateX(-80px);
+    transform: translateX(-100px);
 }
 
 .anim-right {
-    transform: translateX(80px);
+    transform: translateX(100px);
 }
 
 .anim-top {
-    transform: translateY(-60px);
+    transform: translateY(-80px);
 }
 
 .anim-bottom {
-    transform: translateY(60px);
+    transform: translateY(80px);
 }
 
-/* حالة الاستقرار عند ظهور العنصر بالعرض */
+/* حالة الاستقرار عند ظهور العنصر */
 .anim-left.is-visible,
 .anim-right.is-visible,
 .anim-top.is-visible,

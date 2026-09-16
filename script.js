@@ -1,13 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. تفعيل ظهور العناصر الفردية بالحركات عند التمرير
+document.addEventListener("DOMContentLoaded", function () {
+
+    // 1. تفعيل الحركات بحيث تتكرر في كل مرة يتم فيها الدخول والخروج من القسم
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // عندما يصبح العنصر داخل الشاشة، نفّذ الحركة
                 entry.target.classList.add('is-visible');
+            } else {
+                // عندما يخرج العنصر خارج الشاشة، احذف الكلاس لتعيد الحركة نفسها عند العودة إليه
+                entry.target.classList.remove('is-visible');
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
     // مراقبة كل عنصر داخلي يحمل كلاس الحركة
     document.querySelectorAll('.anim-top, .anim-left, .anim-right, .anim-bottom').forEach((element) => {
@@ -42,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
     copyButtons.forEach(button => {
         button.addEventListener('click', () => {
             const textToCopy = button.getAttribute('data-copy');
-            
+
             navigator.clipboard.writeText(textToCopy).then(() => {
                 toast.classList.add('show');
-                
+
                 setTimeout(() => {
                     toast.classList.remove('show');
                 }, 2000);
