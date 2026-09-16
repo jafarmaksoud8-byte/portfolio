@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <!-- مكتبة الأيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- 1. NAVBAR -->
@@ -22,7 +24,7 @@
             <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
-            <li><a href="#contact" class="nav-btn">View Resume</a></li>
+            <li><a href="cv.pdf" class="nav-btn" download>View Resume</a></li>
         </ul>
     </nav>
 
@@ -31,18 +33,24 @@
         <div class="hero-content">
             <h1 class="anim-top">Jafar Maksoud</h1>
             <div class="hero-subtitle anim-bottom">Flutter Developer</div>
-            <p class="hero-desc anim-left">Building clean, responsive, and maintainable cross-platform mobile applications with Flutter & Dart.</p>
+            <p class="hero-desc anim-left">Building clean, responsive, and maintainable cross-platform mobile
+                applications with Flutter & Dart.</p>
             <div class="hero-tech anim-right">Flutter • Dart • Clean Architecture • BLoC • REST APIs</div>
-            
+
             <div class="hero-buttons">
                 <a href="#projects" class="btn-primary anim-left">View My Projects</a>
-                <a href="#contact" class="btn-outline anim-right">Download Resume</a>
+                <!-- زر تحميل السيرة الذاتية يربط بملف cv.pdf مباشرة -->
+                <a href="cv.pdf" class="btn-outline anim-right" download>Download Resume</a>
             </div>
 
-            <div class="hero-socials anim-bottom">
-                <a href="https://github.com/jafarmaksoud8-byte" target="_blank">GitHub</a> • 
-                <a href="#" target="_blank">LinkedIn</a> • 
-                <span class="copy-btn" data-copy="jafarmaksoud8@gmail.com" style="cursor:pointer;">Email</span>
+            <!-- تم تعديل الهامش العلوي (margin-top) ليكون المسافة أريح وأجمل -->
+            <div class="hero-socials anim-bottom" style="margin-top: 35px;">
+                <a href="https://github.com/jafarmaksoud8-byte" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                •
+                <a href="https://www.linkedin.com/in/jafar-maksoud-98ba49302" target="_blank"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a> •
+                <span class="copy-btn" data-copy="jafarmaksoud8@gmail.com" style="cursor:pointer;"><i
+                        class="fas fa-envelope"></i> Email</span>
             </div>
         </div>
     </section>
@@ -73,8 +81,11 @@
         <div class="about-grid">
             <div class="about-text anim-left">
                 <h3>Turning engineering knowledge into mobile applications.</h3>
-                <p>Equipped with a solid Computer Engineering background from Tishreen University, I specialize in developing high-performance mobile software using Flutter and Dart.</p>
-                <p>My focus centers on structured scalability, implementing Clean Architecture layers, managing application states cleanly with BLoC/Cubit, integrating RESTful APIs efficiently, and prioritizing robust problem-solving over quick fixes.</p>
+                <p>Equipped with a solid Computer Engineering background from Tishreen University, I specialize in
+                    developing high-performance mobile software using Flutter and Dart.</p>
+                <p>My focus centers on structured scalability, implementing Clean Architecture layers, managing
+                    application states cleanly with BLoC/Cubit, integrating RESTful APIs efficiently, and prioritizing
+                    robust problem-solving over quick fixes.</p>
             </div>
             <div class="about-card anim-right">
                 <ul>
@@ -170,7 +181,8 @@
                 <div class="timeline-num">03</div>
                 <div class="timeline-content">
                     <h3>Build</h3>
-                    <p>Implement structured Clean Architecture, predictable state management, and reliable API layers.</p>
+                    <p>Implement structured Clean Architecture, predictable state management, and reliable API layers.
+                    </p>
                 </div>
             </div>
             <div class="timeline-item anim-right">
@@ -187,7 +199,7 @@
     <section id="projects" class="section">
         <h2 class="section-title anim-top">Featured Projects</h2>
         <div class="projects-container">
-            
+
             <div class="project-case-card anim-left">
                 <div class="project-header">
                     <h3>Flutter News App</h3>
@@ -200,7 +212,8 @@
                     <span>Dio</span>
                     <span>REST API</span>
                 </div>
-                <p>A cross-platform news application focused on structured architecture, asynchronous data handling, pagination, and responsive user interfaces.</p>
+                <p>A cross-platform news application focused on structured architecture, asynchronous data handling,
+                    pagination, and responsive user interfaces.</p>
                 <ul class="features-list">
                     <li><i class="fas fa-circle"></i> Clean Architecture layers</li>
                     <li><i class="fas fa-circle"></i> REST API Integration via Dio</li>
@@ -208,7 +221,8 @@
                     <li><i class="fas fa-circle"></i> API Error Handling & Logger</li>
                 </ul>
                 <div class="project-links">
-                    <a href="https://github.com/jafarmaksoud8-byte/flutter-news-app" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
+                    <a href="https://github.com/jafarmaksoud8-byte/flutter-news-app" target="_blank" class="btn-primary"
+                        style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
                 </div>
             </div>
 
@@ -223,7 +237,8 @@
                     <span>Localization</span>
                     <span>RTL Support</span>
                 </div>
-                <p>A robust financial management mobile application built with local data persistence, comprehensive form controls, and structured service layers.</p>
+                <p>A robust financial management mobile application built with local data persistence, comprehensive
+                    form controls, and structured service layers.</p>
                 <ul class="features-list">
                     <li><i class="fas fa-circle"></i> Profile Management & Forms</li>
                     <li><i class="fas fa-circle"></i> Advanced Form Validation</li>
@@ -231,7 +246,8 @@
                     <li><i class="fas fa-circle"></i> Arabic / English RTL Support</li>
                 </ul>
                 <div class="project-links">
-                    <a href="https://github.com/jafarmaksoud8-byte/mizan_app" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
+                    <a href="https://github.com/jafarmaksoud8-byte/mizan_app" target="_blank" class="btn-primary"
+                        style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
                 </div>
             </div>
 
@@ -245,7 +261,8 @@
                     <span>Local Storage</span>
                     <span>State Management</span>
                 </div>
-                <p>A clean note-taking application designed for seamless daily usage, featuring smooth CRUD operations and persistent local storage.</p>
+                <p>A clean note-taking application designed for seamless daily usage, featuring smooth CRUD operations
+                    and persistent local storage.</p>
                 <ul class="features-list">
                     <li><i class="fas fa-circle"></i> Create, Edit & Delete Notes</li>
                     <li><i class="fas fa-circle"></i> Fast Local Storage Management</li>
@@ -253,7 +270,8 @@
                     <li><i class="fas fa-circle"></i> Smooth Navigation Flow</li>
                 </ul>
                 <div class="project-links">
-                    <a href="https://github.com/jafarmaksoud8-byte/notes_app" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
+                    <a href="https://github.com/jafarmaksoud8-byte/notes_app" target="_blank" class="btn-primary"
+                        style="padding: 8px 16px; font-size: 13px;">GitHub Repository</a>
                 </div>
             </div>
 
@@ -302,7 +320,8 @@
             <div class="exp-item anim-right">
                 <div class="exp-date">2015</div>
                 <h3 class="exp-title">B.Sc. in Electronics Engineering</h3>
-                <div class="exp-company">Specialization in Computer Engineering & Automatic Control • Tishreen University, Latakia</div>
+                <div class="exp-company">Specialization in Computer Engineering & Automatic Control • Tishreen
+                    University, Latakia</div>
                 <ul class="exp-tasks">
                     <li>Solid foundational training in core computing, systems logic, and engineering principles.</li>
                 </ul>
@@ -322,9 +341,11 @@
     <section id="code" class="section">
         <h2 class="section-title anim-top">Code & Open Source</h2>
         <div class="github-card anim-bottom">
-            <p>I use Git and GitHub to manage projects, track development progress, branch features, and maintain clean source code.</p>
-            <a href="https://github.com/jafarmaksoud8-byte" target="_blank" class="btn-primary"><i class="fab fa-github"></i> Explore GitHub Profile</a>
-            
+            <p>I use Git and GitHub to manage projects, track development progress, branch features, and maintain clean
+                source code.</p>
+            <a href="https://github.com/jafarmaksoud8-byte" target="_blank" class="btn-primary"><i
+                    class="fab fa-github"></i> Explore GitHub Profile</a>
+
             <div class="repos-grid">
                 <div class="repo-item">
                     <h4>mizan_app</h4>
@@ -367,9 +388,10 @@
     <!-- 13. RESUME CTA -->
     <div class="cta-section">
         <h2 class="anim-top">Let's Build Something Together</h2>
-        <p class="anim-bottom">I'm open to Flutter development opportunities, freelance projects, and relocation opportunities.</p>
+        <p class="anim-bottom">I'm open to Flutter development opportunities, freelance projects, and relocation
+            opportunities.</p>
         <div class="hero-buttons" style="margin-top: 20px;">
-            <a href="#contact" class="btn-primary anim-left">Get in Touch</a>
+            <a href="cv.pdf" class="btn-primary anim-left" download>Download Resume</a>
         </div>
     </div>
 
@@ -377,8 +399,9 @@
     <section id="contact" class="section">
         <h2 class="section-title anim-top">Get In Touch</h2>
         <div class="contact-container anim-bottom">
-            <p style="color: var(--text-secondary); margin-bottom: 25px;">Have a project or opportunity in mind? Feel free to reach out directly.</p>
-            
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">Have a project or opportunity in mind? Feel
+                free to reach out directly.</p>
+
             <div class="contact-info-box">
                 <div class="contact-btn copy-btn" data-copy="jafarmaksoud8@gmail.com">
                     <i class="fas fa-envelope"></i>
@@ -389,7 +412,7 @@
                     <i class="fab fa-github"></i>
                     <span>jafarmaksoud8-byte</span>
                 </a>
-                <a href="#" target="_blank" class="contact-btn">
+                <a href="https://www.linkedin.com/in/jafar-maksoud-98ba49302" target="_blank" class="contact-btn">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn Profile</span>
                 </a>
@@ -409,4 +432,5 @@
     <!-- ربط ملف الـ JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>
