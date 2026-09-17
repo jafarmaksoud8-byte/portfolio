@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
+document.addEventListener("DOMContentLoaded", function () {
+
     // 1. مراقبة الحركات وإعادتها في كل مرة يتم فيها التمرير فوق العناصر
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
     copyButtons.forEach(button => {
         button.addEventListener('click', () => {
             const textToCopy = button.getAttribute('data-copy');
-            
+
             navigator.clipboard.writeText(textToCopy).then(() => {
                 toast.classList.add('show');
-                
+
                 setTimeout(() => {
                     toast.classList.remove('show');
                 }, 2000);

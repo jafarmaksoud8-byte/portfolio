@@ -102,7 +102,7 @@ nav ul li a.nav-btn:hover {
 }
 
 /* ==========================================
-   TECHNICAL SKILLS SECTION (مطابق لطلبك حرفياً 3x2)
+   TECHNICAL SKILLS SECTION (3x2 مطابقة حرفية)
    ========================================== */
 .skills-desc {
     text-align: center;
@@ -114,7 +114,6 @@ nav ul li a.nav-btn:hover {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
-    /* 3 أعمدة بالضبط كما طلبت */
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
@@ -125,14 +124,12 @@ nav ul li a.nav-btn:hover {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 32px;
-    /* الـ padding كما طلبته تماماً */
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-/* Hover Animation: ارتفاع 4px فقط مع بوردر أزرق خفيف وبدون قفزات قوية */
 .skill-category-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent-blue);
@@ -144,7 +141,6 @@ nav ul li a.nav-btn:hover {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 20px;
-    /* مسافة واضحة بين العنوان والـ Tags حتى لا تلتصق به */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -232,6 +228,7 @@ nav ul li a.nav-btn:hover {
     font-weight: 600;
     font-size: 14px;
     transition: background-color 0.2s ease;
+    display: inline-block;
 }
 
 .btn-primary:hover {
@@ -248,6 +245,7 @@ nav ul li a.nav-btn:hover {
     font-weight: 600;
     font-size: 14px;
     transition: border-color 0.2s ease;
+    display: inline-block;
 }
 
 .btn-outline:hover {
@@ -434,6 +432,51 @@ footer {
     visibility: visible;
 }
 
+/* Animations Soft Flow */
+.anim-top,
+.anim-left,
+.anim-right,
+.anim-bottom {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.anim-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.anim-top {
+    transform: translateY(-20px);
+}
+
+.anim-bottom.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.anim-bottom {
+    transform: translateY(20px);
+}
+
+.anim-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.anim-left {
+    transform: translateX(-20px);
+}
+
+.anim-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.anim-right {
+    transform: translateX(20px);
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
     .skills-grid {
@@ -452,5 +495,9 @@ footer {
 
     nav ul {
         display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
     }
 }
