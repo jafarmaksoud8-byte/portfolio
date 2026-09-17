@@ -326,22 +326,28 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2 class="section-title animate-from-top">Get In Touch</h2>
-            <p class="contact-subtitle animate-from-top">Have a project or opportunity in mind? Feel free to reach out
+            <p class="section-subtitle animate-from-top">Have a project or opportunity in mind? Feel free to reach out
                 directly.</p>
 
             <div class="contact-card animate-from-bottom">
-                <div class="social-buttons contact-buttons">
-                    <a href="mailto:jafarmaksoud8@gmail.com" class="social-btn"><i class="fas fa-envelope"></i>
-                        jafarmaksoud8@gmail.com</a>
+                <div class="contact-methods">
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <span id="email-text">jafarmaksoud8@gmail.com</span>
+                        <button class="copy-btn" onclick="copyEmail()" title="Copy Email">
+                            <i class="fas fa-copy"></i>
+                            <span class="copy-tooltip" id="copy-tooltip">Copy</span>
+                        </button>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+963 985 643 418</span>
+                    </div>
+                </div>
+                <div class="social-buttons contact-buttons" style="margin-top: 25px;">
                     <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i>
                         LinkedIn Profile</a>
                 </div>
-            </div>
-
-            <div class="cta-banner animate-from-top">
-                <h3>Let's Build Something Together</h3>
-                <p>I'm open to Flutter development opportunities, freelance projects, and relocation opportunities.</p>
-                <a href="cv.pdf" class="btn-primary" target="_blank">Download Resume</a>
             </div>
         </div>
     </section>
@@ -352,7 +358,7 @@
         <p>© 2026 Jafar Maksoud. All rights reserved.</p>
     </footer>
 
-    <!-- ربط ملف الجافاسكريبت الخارجي -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 
