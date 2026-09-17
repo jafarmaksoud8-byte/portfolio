@@ -1,30 +1,44 @@
+// Advanced Scroll Animations Handler (تفعيل الحركات بشكل مستمر ودائم عند كل تنقل وتمرير)
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll(
         ".animate-from-top, .animate-from-left, .animate-from-right, .animate-from-bottom"
     );
 
     const checkAnimations = () => {
-        const triggerBottom = window.innerHeight * 0.92;
+        const triggerBottom = window.innerHeight * 0.88;
 
         animatedElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
 
             if (elTop < triggerBottom) {
                 el.classList.add("active");
+            } else {
+                // إذا بدك العنصر يرجع يتحرك كل ما طلعت ونزلت فوق تحت، فينا نشيل الكومنت عن السطر تحت
+                // el.classList.remove("active");
             }
         });
     };
 
+    // تشغيل عند التحميل والتمرير
     window.addEventListener("scroll", checkAnimations);
     window.addEventListener("resize", checkAnimations);
-    
-    setTimeout(checkAnimations, 100);
 
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            setTimeout(checkAnimations, 200);
-            setTimeout(checkAnimations, 500);
-        });
-    });
+    // تشغيل فوري أول ما تفتح الصفحة
+    setTimeout(checkAnimations, 100);
 });
+
+// Function to copy text on click and show "تم النسخ بنجاح" alert inside the button
+function copyText(elementId, buttonElement) {
+    const textToCopy = document.getElementById(elementId).innerText;
+    const alertBox = buttonElement.querySelector(".copy-alert");
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alertBox.classList.add("show");
+
+        setTimeout(() => {
+            alertBox.classList.remove("show");
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
