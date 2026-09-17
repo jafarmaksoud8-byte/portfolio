@@ -1,11 +1,11 @@
-// Advanced Scroll Animations Handler (تفعيل الحركات بشكل مستمر ودائم عند كل تنقل وتمرير)
+// Advanced Scroll Animations Handler (تفعيل الحركات بشكل مستمر ودائم عند كل تنقل وتمرير صعوداً ونزولاً)
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll(
         ".animate-from-top, .animate-from-left, .animate-from-right, .animate-from-bottom"
     );
 
     const checkAnimations = () => {
-        const triggerBottom = window.innerHeight * 0.88;
+        const triggerBottom = window.innerHeight * 0.90;
 
         animatedElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (elTop < triggerBottom) {
                 el.classList.add("active");
             } else {
-                // إذا بدك العنصر يرجع يتحرك كل ما طلعت ونزلت فوق تحت، فينا نشيل الكومنت عن السطر تحت
-                // el.classList.remove("active");
+                // تفعيل إعادة الحركة عند الصعود والنزول المتكرر بين الأقسام
+                el.classList.remove("active");
             }
         });
     };
 
-    // تشغيل عند التحميل والتمرير
+    // تشغيل عند التحميل والتمرير وتغيير الحجم
     window.addEventListener("scroll", checkAnimations);
     window.addEventListener("resize", checkAnimations);
 
