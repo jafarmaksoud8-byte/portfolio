@@ -154,21 +154,62 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Social Buttons (GitHub, LinkedIn, Email) */
 .social-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .social-btn {
+    background-color: #1e293b;
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s, color 0.3s, transform 0.2s;
 }
 
 .social-btn:hover {
+    border-color: #38bdf8;
     color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+.social-btn i {
+    font-size: 1.1rem;
+}
+
+/* Copy Alert Popup for Email Button */
+.social-btn .copy-alert {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #22c55e;
+    color: #fff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.social-btn .copy-alert.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* About Section */
