@@ -102,7 +102,7 @@ nav ul li a.nav-btn:hover {
 }
 
 /* ==========================================
-   TECHNICAL SKILLS SECTION (3x2 مطابقة حرفية)
+   TECHNICAL SKILLS SECTION
    ========================================== */
 .skills-desc {
     text-align: center;
@@ -281,7 +281,7 @@ nav ul li a.nav-btn:hover {
     color: var(--text-secondary);
 }
 
-/* Timelines (Experience, Education, Training) */
+/* Timelines */
 .exp-timeline {
     max-width: 900px;
     margin: 40px auto 0 auto;
@@ -432,7 +432,7 @@ footer {
     visibility: visible;
 }
 
-/* Animations Soft Flow */
+/* Animations */
 .anim-top,
 .anim-left,
 .anim-right,
