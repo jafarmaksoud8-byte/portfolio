@@ -1,452 +1,911 @@
 /* ==========================================
+
    GLOBAL STYLES & VARIABLES (Dark Theme)
+
    ========================================== */
+
 :root {
+
     --bg-primary: #0b0f19;
+
     --bg-card: #111827;
+
     --border-color: #1f2937;
+
     --border-hover: #3b82f6;
+
     --text-primary: #f9fafb;
+
     --text-secondary: #9ca3af;
+
     --accent-blue: #3b82f6;
+
     --accent-blue-glow: rgba(59, 130, 246, 0.15);
+
 }
+
+
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
     scroll-behavior: smooth;
+
 }
+
+
 
 body {
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     background-color: var(--bg-primary);
+
     color: var(--text-primary);
+
     line-height: 1.6;
+
 }
 
+
+
 /* ==========================================
+
    NAVBAR
+
    ========================================== */
+
 nav {
+
     position: fixed;
+
     top: 0;
+
     left: 0;
+
     width: 100%;
+
     background-color: rgba(11, 15, 25, 0.95);
+
     backdrop-filter: blur(10px);
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     padding: 20px 5%;
+
     border-bottom: 1px solid var(--border-color);
+
     z-index: 1000;
+
 }
+
+
 
 nav .logo {
+
     font-weight: 700;
+
     font-size: 20px;
+
     color: var(--text-primary);
+
 }
+
+
 
 nav ul {
+
     list-style: none;
+
     display: flex;
+
     align-items: center;
+
     gap: 25px;
+
 }
+
+
 
 nav ul li a {
+
     text-decoration: none;
+
     color: var(--text-secondary);
+
     font-size: 14px;
+
     font-weight: 500;
+
     transition: color 0.2s ease;
+
 }
+
+
 
 nav ul li a:hover,
+
 nav ul li a.active {
+
     color: var(--accent-blue);
+
 }
+
+
 
 nav ul li a.nav-btn {
+
     background-color: transparent;
+
     border: 1px solid var(--accent-blue);
+
     padding: 8px 16px;
+
     border-radius: 6px;
+
     color: var(--accent-blue);
+
     transition: all 0.2s ease;
+
 }
+
+
 
 nav ul li a.nav-btn:hover {
+
     background-color: var(--accent-blue);
+
     color: #fff;
+
 }
 
+
+
 /* ==========================================
+
    SECTIONS GENERAL
+
    ========================================== */
+
 .section {
+
     padding: 100px 10% 60px 10%;
+
     max-width: 1400px;
+
     margin: 0 auto;
+
 }
+
+
 
 .section-title {
+
     font-size: 32px;
+
     font-weight: 700;
+
     text-align: center;
+
     margin-bottom: 10px;
+
     color: var(--text-primary);
+
 }
 
+
+
 /* ==========================================
-   TECHNICAL SKILLS SECTION
+
+   TECHNICAL SKILLS SECTION (مطابق لطلبك حرفياً 3x2)
+
    ========================================== */
+
 .skills-desc {
+
     text-align: center;
+
     color: var(--text-secondary);
+
     font-size: 15px;
+
     margin-bottom: 40px;
+
 }
+
+
 
 .skills-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr) !important;
+
+    /* 3 أعمدة بالضبط كما طلبت */
+
     gap: 24px;
+
     max-width: 1200px;
+
     margin: 0 auto;
+
 }
+
+
 
 .skill-category-card {
+
     background-color: var(--bg-card);
+
     border: 1px solid var(--border-color);
+
     border-radius: 12px;
+
     padding: 32px;
+
+    /* الـ padding كما طلبته تماماً */
+
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: flex-start;
+
 }
+
+
+
+/* Hover Animation: ارتفاع 4px فقط مع بوردر أزرق خفيف وبدون قفزات قوية */
 
 .skill-category-card:hover {
+
     transform: translateY(-4px);
+
     border-color: var(--accent-blue);
+
     box-shadow: 0 10px 25px -5px var(--accent-blue-glow);
+
 }
+
+
 
 .skill-category-card h3 {
+
     font-size: 18px;
+
     font-weight: 600;
+
     color: var(--text-primary);
+
     margin-bottom: 20px;
+
+    /* مسافة واضحة بين العنوان والـ Tags حتى لا تلتصق به */
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
 }
+
+
 
 .skill-category-card h3 i {
+
     color: var(--accent-blue);
+
     font-size: 18px;
+
     transition: transform 0.25s ease;
+
 }
+
+
 
 .skill-category-card:hover h3 i {
+
     transform: scale(1.1);
+
 }
+
+
 
 .skill-tags {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 10px;
+
 }
+
+
 
 .skill-tag {
+
     background-color: rgba(31, 41, 55, 0.7);
+
     color: var(--text-secondary);
+
     font-size: 13px;
+
     padding: 6px 12px;
+
     border-radius: 6px;
+
     border: 1px solid rgba(255, 255, 255, 0.03);
+
     transition: color 0.2s ease, background-color 0.2s ease;
+
 }
+
+
 
 .skill-tag:hover {
+
     color: var(--text-primary);
+
     background-color: rgba(59, 130, 246, 0.1);
+
 }
+
+
 
 /* ==========================================
-   OTHER SECTIONS
+
+   OTHER SECTIONS (Hero, Projects, Experience, etc.)
+
    ========================================== */
+
 .hero-content {
+
     min-height: 80vh;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
+
 }
+
+
 
 .hero-content h1 {
+
     font-size: 48px;
+
     font-weight: 800;
+
     margin-bottom: 10px;
+
 }
+
+
 
 .hero-subtitle {
+
     font-size: 24px;
+
     color: var(--accent-blue);
+
     font-weight: 600;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .hero-desc {
+
     max-width: 600px;
+
     color: var(--text-secondary);
+
     margin-bottom: 20px;
+
 }
+
+
 
 .hero-tech {
+
     color: var(--text-secondary);
+
     font-size: 14px;
+
     margin-bottom: 30px;
+
 }
+
+
 
 .hero-buttons {
+
     display: flex;
+
     gap: 15px;
+
 }
+
+
 
 .btn-primary {
+
     background-color: var(--accent-blue);
+
     color: #fff;
+
     padding: 12px 24px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-weight: 600;
+
     font-size: 14px;
+
     transition: background-color 0.2s ease;
+
 }
+
+
 
 .btn-primary:hover {
+
     background-color: #2563eb;
+
 }
+
+
 
 .btn-outline {
+
     background-color: transparent;
+
     color: var(--text-primary);
+
     border: 1px solid var(--border-color);
+
     padding: 12px 24px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-weight: 600;
+
     font-size: 14px;
+
     transition: border-color 0.2s ease;
+
 }
+
+
 
 .btn-outline:hover {
+
     border-color: var(--accent-blue);
+
 }
+
+
 
 /* Stats Container */
+
 .stats-container {
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 20px;
+
     max-width: 1200px;
+
     margin: -40px auto 40px auto;
+
     padding: 0 5%;
+
 }
+
+
 
 .stat-card {
+
     background-color: var(--bg-card);
+
     border: 1px solid var(--border-color);
+
     padding: 20px;
+
     border-radius: 10px;
+
     text-align: center;
+
 }
+
+
 
 .stat-number {
+
     font-size: 22px;
+
     font-weight: 700;
+
     color: var(--accent-blue);
+
 }
+
+
 
 .stat-label {
+
     font-size: 13px;
+
     color: var(--text-secondary);
+
 }
 
-/* Timelines */
+
+
+/* Timelines (Experience, Education, Training) */
+
 .exp-timeline {
+
     max-width: 900px;
+
     margin: 40px auto 0 auto;
+
     border-left: 2px solid var(--border-color);
+
     padding-left: 30px;
+
 }
+
+
 
 .exp-item {
+
     position: relative;
+
     margin-bottom: 40px;
+
 }
+
+
 
 .exp-item::before {
+
     content: '';
+
     position: absolute;
+
     left: -37px;
+
     top: 5px;
+
     width: 12px;
+
     height: 12px;
+
     border-radius: 50%;
+
     background-color: var(--accent-blue);
+
     border: 2px solid var(--bg-primary);
+
 }
+
+
 
 .exp-date {
+
     font-size: 13px;
+
     color: var(--accent-blue);
+
     font-weight: 600;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .exp-title {
+
     font-size: 18px;
+
     font-weight: 600;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .exp-company {
+
     font-size: 14px;
+
     color: var(--text-secondary);
+
     margin-bottom: 12px;
+
 }
+
+
 
 .exp-tasks {
+
     list-style: disc;
+
     padding-left: 18px;
+
     color: var(--text-secondary);
+
     font-size: 14px;
+
 }
+
+
 
 .exp-tasks li {
+
     margin-bottom: 6px;
+
 }
+
+
 
 /* Projects Container */
+
 .projects-container {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
     gap: 24px;
+
     margin-top: 40px;
+
 }
+
+
 
 .project-case-card {
+
     background-color: var(--bg-card);
+
     border: 1px solid var(--border-color);
+
     border-radius: 12px;
+
     padding: 28px;
+
     transition: border-color 0.2s ease, transform 0.2s ease;
+
 }
+
+
 
 .project-case-card:hover {
+
     border-color: var(--accent-blue);
+
     transform: translateY(-4px);
+
 }
+
+
 
 .project-header h3 {
+
     font-size: 20px;
+
     font-weight: 600;
+
     margin-bottom: 12px;
+
 }
+
+
 
 .project-tech-tags {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .project-tech-tags span {
+
     background-color: rgba(59, 130, 246, 0.1);
+
     color: var(--accent-blue);
+
     font-size: 11px;
+
     padding: 4px 8px;
+
     border-radius: 4px;
+
 }
+
+
 
 .project-case-card p {
+
     color: var(--text-secondary);
+
     font-size: 14px;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .features-list {
+
     list-style: none;
+
     margin-bottom: 20px;
+
 }
+
+
 
 .features-list li {
+
     font-size: 13px;
+
     color: var(--text-secondary);
+
     margin-bottom: 6px;
+
     display: flex;
+
     align-items: center;
+
     gap: 8px;
+
 }
+
+
 
 .features-list li i {
+
     font-size: 6px;
+
     color: var(--accent-blue);
+
 }
+
+
 
 /* Footer & Contact */
+
 footer {
+
     text-align: center;
+
     padding: 40px 0;
+
     border-top: 1px solid var(--border-color);
+
     color: var(--text-secondary);
+
     font-size: 14px;
+
     margin-top: 80px;
+
 }
+
+
 
 .toast-msg {
+
     visibility: hidden;
+
     position: fixed;
+
     bottom: 30px;
+
     left: 50%;
+
     transform: translateX(-50%);
+
     background-color: #10b981;
+
     color: #fff;
+
     padding: 10px 20px;
+
     border-radius: 6px;
+
     font-size: 14px;
+
     z-index: 2000;
+
     transition: visibility 0.2s ease;
+
 }
+
+
 
 .toast-msg.show {
+
     visibility: visible;
+
 }
+
+
 
 /* Responsive Breakpoints */
+
 @media (max-width: 1024px) {
+
     .skills-grid {
+
         grid-template-columns: repeat(2, 1fr) !important;
+
     }
+
 }
 
+
+
 @media (max-width: 768px) {
+
     .skills-grid {
+
         grid-template-columns: 1fr !important;
+
     }
+
+
 
     .stats-container {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
 
+
+
     nav ul {
+
         display: none;
+
     }
+
 }
