@@ -1,24 +1,30 @@
-// Intersection Observer for Scroll Animations (تشغيل الحركات عند النزول والتنقل بين الأقسام)
+// Advanced Scroll Animations Handler (تفعيل الحركات بشكل مستمر ودائم عند كل تنقل وتمرير)
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll(
         ".animate-from-top, .animate-from-left, .animate-from-right, .animate-from-bottom"
     );
 
-    const observer = new IntersectionObserver((entries, observerInstance) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                // إذا بدك الحركة تتفعل مرة وحدة لما تنزل:
-                // observerInstance.unobserve(entry.target);
+    const checkAnimations = () => {
+        const triggerBottom = window.innerHeight * 0.88;
+
+        animatedElements.forEach(el => {
+            const elTop = el.getBoundingClientRect().top;
+
+            if (elTop < triggerBottom) {
+                el.classList.add("active");
+            } else {
+                // إذا بدك العنصر يرجع يتحرك كل ما طلعت ونزلت فوق تحت، فينا نشيل الكومنت عن السطر تحت
+                // el.classList.remove("active");
             }
         });
-    }, {
-        threshold: 0.15
-    });
+    };
 
-    animatedElements.forEach(el => {
-        observer.observe(el);
-    });
+    // تشغيل عند التحميل والتمرير
+    window.addEventListener("scroll", checkAnimations);
+    window.addEventListener("resize", checkAnimations);
+
+    // تشغيل فوري أول ما تفتح الصفحة
+    setTimeout(checkAnimations, 100);
 });
 
 // Function to copy text on click and show "تم النسخ بنجاح" alert inside the button
