@@ -331,17 +331,19 @@
 
             <div class="contact-card animate-from-bottom">
                 <div class="contact-methods">
-                    <div class="contact-row">
+                    <!-- Email Copy Box -->
+                    <div class="contact-action-btn" onclick="copyText('email-text', this)" title="Click to copy email">
                         <i class="fas fa-envelope"></i>
-                        <span id="email-text">jafarmaksoud8@gmail.com</span>
-                        <button class="copy-btn" onclick="copyEmail()" title="Copy Email">
-                            <i class="fas fa-copy"></i>
-                            <span class="copy-tooltip" id="copy-tooltip">Copy</span>
-                        </button>
+                        <span id="email-text">Email: jafarmaksoud8@gmail.com</span>
+                        <span class="copy-alert">تم النسخ بنجاح</span>
                     </div>
-                    <div class="contact-row">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+963 985 643 418</span>
+
+                    <!-- Phone WhatsApp Box -->
+                    <div class="contact-action-btn" onclick="copyText('phone-text', this)"
+                        title="Click to copy phone number">
+                        <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+                        <span id="phone-text">+963 985 643 418</span>
+                        <span class="copy-alert">تم النسخ بنجاح</span>
                     </div>
                 </div>
                 <div class="social-buttons contact-buttons" style="margin-top: 25px;">
